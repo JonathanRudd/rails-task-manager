@@ -2,10 +2,16 @@
   <div class="container">
     <ul>
       <% @tasks.each do |task| %>
-        <h2 class="title"><%= task.title %></h2>
-        <p class="details"><%= task.details %></p>
-        <p class="checkbox">completed = <%= task.completed %></p>
+        <div class="card" style="width: 18rem;">
+          <%= link_to task.title, task_path(task) %>
+          <p class="details"><%= task.details %></p>
+          <p class="checkbox">completed = <%= task.completed %></p>
+          <i class="fa-regular fa-square"></i>
+
+        </div>
     <% end %>
     </ul>
+    <%= link_to "Add a new task", new_path %>
+
   </div>
 </div>
