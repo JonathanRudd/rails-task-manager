@@ -5,8 +5,7 @@
         <div class="card" style="width: 18rem;">
           <%= link_to task.title, task_path(task) %>
           <p class="details"><%= task.details %></p>
-          <p class="checkbox">completed = <%= task.completed %></p>
-          <i class="fa-regular fa-square"></i>
+          <input class="checkbox" type="checkbox"><%= task.completed %></p>
 
         </div>
     <% end %>
