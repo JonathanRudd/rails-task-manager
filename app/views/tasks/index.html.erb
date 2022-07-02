@@ -1,0 +1,11 @@
+<h1>Taskmaster:</h1>
+  <div class="container">
+    <ul>
+      <% @tasks.each do |task| %>
+        <h2 class="title"><%= task.title %></h2>
+        <p class="details"><%= task.details %></p>
+        <p class="checkbox">completed = <%= task.completed %></p>
+    <% end %>
+    </ul>
+  </div>
+</div>
